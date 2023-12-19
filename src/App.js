@@ -72,42 +72,48 @@ function App() {
   }
 
   return (
-    <div className="calculator">
-      <div>
-        <h1>Simplest Working Calculator</h1>
+    <div className="app-container">
+      <div className="header">
+        <h1>A Simple Calculator App made using React</h1>
+        <p>By Neel Sadafule</p>
       </div>
-      <div className="display" ref={resultRef}>
-        {result !== null ? result : currentInput !== "" ? currentInput : 0}
-        {operator && ` ${operator}`}
-        {currentInput !== "" && operator && ` ${currentInput}`}
-      </div>
-      <div className="buttons">
-        <button onClick={() => calculate(7)}>7</button>
-        <button onClick={() => calculate(8)}>8</button>
-        <button onClick={() => calculate(9)}>9</button>
-        <button onClick={handleOperation} className="operator">
-          +
-        </button>
-        <button onClick={() => calculate(4)}>4</button>
-        <button onClick={() => calculate(5)}>5</button>
-        <button onClick={() => calculate(6)}>6</button>
-        <button onClick={handleOperation} className="operator">
-          -
-        </button>
-        <button onClick={() => calculate(1)}>1</button>
-        <button onClick={() => calculate(2)}>2</button>
-        <button onClick={() => calculate(3)}>3</button>
-        <button onClick={handleOperation} className="operator">
-          x
-        </button>
-        <button onClick={resetResult}>C</button>
-        <button onClick={() => calculate(0)}>0</button>
-        <button onClick={handleEquals} className="equal">
-          =
-        </button>
-        <button onClick={handleOperation} className="operator">
-          ÷
-        </button>
+      <div className="calculator">
+        <div>
+          <h1>Simplest Working Calculator</h1>
+        </div>
+        <div className="display" ref={resultRef}>
+          {result !== null ? result : currentInput !== "" ? currentInput : 0}
+          {operator && ` ${operator}`}
+          {currentInput !== "" && operator && ` ${currentInput}`}
+        </div>
+        <div className="buttons">
+          <button onClick={() => calculate(7)}>7</button>
+          <button onClick={() => calculate(8)}>8</button>
+          <button onClick={() => calculate(9)}>9</button>
+          <button onClick={handleOperation} className="operator">
+            +
+          </button>
+          <button onClick={() => calculate(4)}>4</button>
+          <button onClick={() => calculate(5)}>5</button>
+          <button onClick={() => calculate(6)}>6</button>
+          <button onClick={handleOperation} className="operator">
+            -
+          </button>
+          <button onClick={() => calculate(1)}>1</button>
+          <button onClick={() => calculate(2)}>2</button>
+          <button onClick={() => calculate(3)}>3</button>
+          <button onClick={handleOperation} className="operator">
+            x
+          </button>
+          <button onClick={resetResult}>C</button>
+          <button onClick={() => calculate(0)}>0</button>
+          <button onClick={handleEquals} className="equal">
+            =
+          </button>
+          <button onClick={handleOperation} className="operator">
+            ÷
+          </button>
+        </div>
       </div>
     </div>
   );
